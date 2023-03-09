@@ -9,15 +9,28 @@ public abstract class Main {
         System.out.println(harry);
         System.out.println(germiona);
         System.out.println(ron);
+        System.out.println();
+        Hufflepuff zaharia = new Hufflepuff(55,  60,"Захария Смит", 44, 36, 42);
+        Hufflepuff sedric = new Hufflepuff(25,  66,"Седрик Дигтори", 72, 56, 53);
+        Hufflepuff djastin = new Hufflepuff(48,  33,"Маркус Белби", 22, 48, 61);
+        System.out.println(zaharia);
+        System.out.println(sedric);
+        System.out.println(djastin);
+        System.out.println();
+        Ravenclaw chgou = new Ravenclaw(44,  33,"Чжоу Чанг", 66, 48, 56);
+        Ravenclaw padma = new Ravenclaw(66,  55,"Падма Пагил", 68, 33, 43);
+        Ravenclaw markus = new Ravenclaw(43,  48,"Маркус Белби", 55, 22, 33);
+        System.out.println(chgou);
+        System.out.println(padma);
+        System.out.println(markus);
+        System.out.println();
+        Slytherin drako = new Slytherin(66,  46,"Драко Малфой", 42, 33, 55);
+        Slytherin grekhem = new Slytherin(28,  33,"Грэхэм Монтегю", 44, 66, 77);
+        Slytherin gregory = new Slytherin(54,  66,"Грегори Гойл", 38, 51, 61);
+        System.out.println(drako);
+        System.out.println(grekhem);
+        System.out.println(gregory);
 
-//        Gryffindor Gryffindor = new Gryffindor();
-//        Gryffindor gryffindor = new Gryffindor();
-//        gryffindor.studentGryffindor("Гарри Потер", 80, 20, 60);
-//        gryffindor gryffindor("Гарри Потер", 80, 20, 60);
-////        Gryffindor Gryffindor("Гарри Потер", 80, 20, 60);
-//        Gryffindor.studentGryffindor("Гермиона Грейнджер", 40, 40, 50);
-//        gryffindor.studentGryffindor("Рон Уизли", 30, 50, 90);
-//        System.out.println(gryffindor.studentGryffindor());
 
     }
 }

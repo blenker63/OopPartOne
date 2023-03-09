@@ -3,15 +3,14 @@ public class Gryffindor extends Hogwarts {
     private final int nobility;
     private final int honor;
     private final int bravery;
+//    public int sumTraitGryffindor;
 
-//    public Gryffindor() {
     public Gryffindor(int power, int transgress, String name, int nobility, int honor, int bravery) {
         super(power, transgress);
         this.name = name;
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
-//        System.out.println(gryffindor());
     }
 
 
@@ -27,14 +26,6 @@ public class Gryffindor extends Hogwarts {
             public int getBravery() {
                 return bravery;
             }
-//            public String studentGryffindor() {
-//                Gryffindor studentGryffindor = new Gryffindor();
-//                return "Факультет Гриффиндор, " + "ученик - " + getName()
-//                        + "; благородство - " + getNobility()
-//                        + "; честь - " + getHonor()
-//                        + "; храбрость - " + getBravery();
-////                return null;
-//            }
 
                 @Override
     public String toString() {
@@ -45,14 +36,11 @@ public class Gryffindor extends Hogwarts {
                 + "; мощность - " + getPower()
                 + "; трансгрессирование - " + getTransgress();
     }
+public void bestStudentGryffindor() {
 
-//    public String studentGryffindor(String name, int nobility,
-//                                    int honor,
-//                                    int bravery) {
-//        return "Факультет Гриффиндор, " + "ученик - " + getName()
-//                + "; благородство - " + getNobility()
-//                + "; честь - " + getHonor()
-//                + "; храбрость - " + getBravery();
-//    }
+//    int  sumTraitGryffindor = getNobility() + getHonor() + getBravery();
+
+
+}
 }
 
