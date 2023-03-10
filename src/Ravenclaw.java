@@ -1,20 +1,13 @@
 public class Ravenclaw extends Hogwarts {
-    private final String name;
     private final int nobility;
     private final int honor;
     private final int bravery;
 
-    public Ravenclaw(int power, int transgress, String name, int nobility, int honor, int bravery) {
-        super(power, transgress);
-        this.name = name;
+    public Ravenclaw(String name, int power, int transgress, int nobility, int honor, int bravery) {
+        super(name, power, transgress);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
-    }
-
-
-    public String getName() {
-        return name;
     }
     public int getNobility() {
         return nobility;
@@ -34,5 +27,17 @@ public class Ravenclaw extends Hogwarts {
                 + "; храбрость - " + getBravery()
                 + "; мощность - " + getPower()
                 + "; трансгрессирование - " + getTransgress();
+    }
+    public void determineBestStudentRavenclaw(Ravenclaw ravenclaw) {
+
+        int studentPowerOne = getNobility() + getHonor() + getBravery();
+        int studentPowerTwo = ravenclaw.getNobility() + getHonor() + getBravery();
+        if (studentPowerOne>studentPowerTwo) {
+            System.out.println(getName() + " лучший Когтевранец, чем " + ravenclaw.getName());
+        }  else if (studentPowerOne < studentPowerTwo) {
+            System.out.println(ravenclaw.getName() + " лучший Когтевранец, чем " + getName());
+        }
+        else
+            System.out.println(ravenclaw.getName() +  " и " + getName() + " имеют одинаковое количествотв свойств");
     }
 }

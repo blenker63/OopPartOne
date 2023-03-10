@@ -1,20 +1,13 @@
 public class Hufflepuff extends Hogwarts {
-    private final String name;
     private final int nobility;
     private final int honor;
     private final int bravery;
 
-    public Hufflepuff(int power, int transgress, String name, int nobility, int honor, int bravery) {
-        super(power, transgress);
-        this.name = name;
+    public Hufflepuff(String name, int power, int transgress, int nobility, int honor, int bravery) {
+        super(name, power, transgress);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
-    }
-
-
-    public String getName() {
-        return name;
     }
     public int getNobility() {
         return nobility;
@@ -34,6 +27,18 @@ public class Hufflepuff extends Hogwarts {
                 + "; храбрость - " + getBravery()
                 + "; мощность - " + getPower()
                 + "; трансгрессирование - " + getTransgress();
+    }
+    public void determineBestStudentHufflepuff(Hufflepuff hufflepuff) {
+
+        int studentPowerOne = getNobility() + getHonor() + getBravery();
+        int studentPowerTwo = hufflepuff.getNobility() + getHonor() + getBravery();
+        if (studentPowerOne>studentPowerTwo) {
+            System.out.println(getName() + " лучший Пуффендуец, чем " + hufflepuff.getName());
+        }  else if (studentPowerOne < studentPowerTwo) {
+            System.out.println(hufflepuff.getName() + " лучший Пуффендуец, чем " + getName());
+        }
+        else
+            System.out.println(hufflepuff.getName() +  " и " + getName() + " имеют одинаковое количествотв свойств");
     }
 }
 

@@ -1,22 +1,14 @@
 public class Gryffindor extends Hogwarts {
-    private final String name;
     private final int nobility;
     private final int honor;
     private final int bravery;
-//    public int sumTraitGryffindor;
 
-    public Gryffindor(int power, int transgress, String name, int nobility, int honor, int bravery) {
-        super(power, transgress);
-        this.name = name;
+    public Gryffindor(String name, int power, int transgress, int nobility, int honor, int bravery) {
+        super(name, power, transgress);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
     }
-
-
-    public String getName() {
-                return name;
-            }
             public int getNobility() {
                 return nobility;
             }
@@ -36,11 +28,20 @@ public class Gryffindor extends Hogwarts {
                 + "; мощность - " + getPower()
                 + "; трансгрессирование - " + getTransgress();
     }
-public void bestStudentGryffindor() {
+public void determineBestStudentGryffindor(Gryffindor gryffindor) {
 
-//    int  sumTraitGryffindor = getNobility() + getHonor() + getBravery();
-
-
+    int studentPowerOne = getNobility() + getHonor() + getBravery();
+    int studentPowerTwo = gryffindor.getNobility() + getHonor() + getBravery();
+//    System.out.println(studentPowerOne);  // проверка подсчета свойств студента 1
+//    System.out.println(studentPowerTwo);  // проверка подсчета свойств студента 2
+    if (studentPowerOne>studentPowerTwo) {
+        System.out.println(getName() + " лучший Гриффендорец, чем " + gryffindor.getName());
+    }  else if (studentPowerOne < studentPowerTwo) {
+        System.out.println(gryffindor.getName() + " лучший Гриффендорец, чем " + getName());
+    }
+    else
+        System.out.println(gryffindor.getName() +  " и " + getName() + " имеют одинаковое количествотв свойств");
 }
+
 }
 
